@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="fechar()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Detalhes do Livro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="livro.imagem" style="width: 200px"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <h1>{{ livro.titulo }}</h1>
+          <h4 *ngIf="livro.editora">{{ livro.editora }}</h4>
+          <h4>{{ livro.dataPublicacao | date: "dd/MM/yyyy" }}</h4>
+          <p>{{ livro.descricao }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

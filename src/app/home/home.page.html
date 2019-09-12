@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Biblioteca Pessoal</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Este aplicativo foi desenvolvido para informar os livros que já li.</p>
+        <ion-item lines="none">
+          <ion-label>
+            <p>{{dados.totalAutores}} Autores</p>
+            <p>{{dados.totalLivros}} Livros</p>
+            <p>{{dados.totalPaginas}} Paginas</p>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Opções</ion-label>
+      </ion-list-header>
+      <ion-item [routerDirection]="'root'" routerLink="/livros/0/0">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Livros</ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" routerLink="/anos">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Anos</ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" routerLink="/autores">
+        <ion-icon slot="start" color="medium" name="person"></ion-icon>
+        <ion-label>Autores</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

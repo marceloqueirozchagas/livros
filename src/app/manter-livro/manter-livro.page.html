@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="livros"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Incluir livro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">*Ano</ion-label>
+            <ion-input type="number" formControlName="ano"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">*Titulo</ion-label>
+            <ion-input type="text" formControlName="titulo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">*Autor </ion-label>
+            <ion-input type="text" formControlName="autor"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating ">Volume</ion-label>
+            <ion-input type="text" formControlName="volume"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">*Páginas</ion-label>
+            <ion-input type="number" formControlName="paginas"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">ISBN</ion-label>
+            <ion-input type="text" formControlName="isbn"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="salvar()">
+            <ion-icon name="checkmark"></ion-icon>
+            Salvar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

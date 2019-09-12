@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "livrosApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

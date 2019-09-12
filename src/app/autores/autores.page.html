@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+          </ion-buttons>
+      <ion-title>
+        Autores
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of autores" detail [routerLink]="['/','livros', 0, item.autor]">
+        <ion-label>
+          <h2>{{item.autor}}</h2>
+          <h3>{{item.quantidade}} livro(s)</h3>
+          <h3>{{item.totalPaginas |  number:'':'pt'}} páginas</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
